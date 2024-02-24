@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+        <Frame 
+            BackgroundColor="#785643" 
+            Padding="24">
+            <Label 
+                Text="Question" 
+                x:Name="_Question"
+                FontSize="Large" />
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- Row 1 -->
+            <Button 
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="1"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Padding="35"
+                x:Name="_Answer1"
+                Clicked="Answer_Clicked"
+                BindingContext="1"/>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="2"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Padding="35"
+                x:Name="_Answer2"
+                Clicked="Answer_Clicked"
+                BindingContext="2"/>
+
+            <!-- Row 2 -->
+            <Button 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="3"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Padding="35"
+                x:Name="_Answer3"
+                Clicked="Answer_Clicked"
+                BindingContext="3"/>
+            <Button 
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="4"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Padding="35"
+                x:Name="_Answer4"
+                Clicked="Answer_Clicked"
+                BindingContext="4"/>
+        </Grid>
+
+
+
+        <Label 
+            Text="0" 
+            x:Name="_AnsweredCorrectly"
+            FontSize="Large"
+            />
+
+        
+        <Label 
+            Text="" 
+            x:Name="_FinalResult"
+            FontSize="Large"
+            />
+
+    </StackLayout>
+
+</ContentPage>
